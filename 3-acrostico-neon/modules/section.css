@@ -1,0 +1,62 @@
+.section {}
+
+.section--hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(var(--primary-theme-color), var(--secondary-theme-color));
+    min-height: 100vh;
+}
+
+.section__link--hero {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--primary-text-color);
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+.section__link-letter {
+/**text-shadow: 0 0 0.5rem var(--primary-highlight-color);**/
+position: relative;
+transition: filter 0.25s;
+}
+
+.section__link-letter:nth-child(1){
+    color: var(--letter-color-1);
+}
+
+.section__link-letter:nth-child(2){
+    color: var(--letter-color-2);
+}
+.section__link-letter:nth-child(3){
+    color: var(--letter-color-3);
+}
+.section__link-letter:nth-child(4){
+    color: var(--letter-color-4);
+}
+.section__link-letter:nth-child(5){
+    color: var(--letter-color-5);
+}
+
+.section__link-letter::before {
+    content: var(--letter);
+    position: absolute;
+    top: 75%;
+    left: 0;
+    filter:blur(0.15rem);
+    transform: rotateX(137deg);
+    }
+
+    .section__link-letter::after {
+        content: var(--letter);
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter:blur(0.25rem);
+        transform: scale(1.125)
+        }
+    
+        .section__link-letter:hover {
+            filter: brightness(2.5);
+        }
